@@ -1,0 +1,114 @@
+body{
+    font-family: arial,helvetica;
+    background: #ECB3D4;
+}
+
+.Encabezado {
+    background-color: #B531A8;
+    padding: 5px;
+    text-align: center;
+}
+
+header, footer{
+    background-color: #B531A8;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.Encabezado img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.Encabezado img:hover {
+    transform: scale(1.1);
+}
+
+.Busqueda{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Busqueda input{
+    width: 300px;
+    height: 40px;
+    padding: 0 15px;
+    font-size: 16px;
+    border: 2px solid #B531A8;
+    border-radius: 20px;
+}
+
+.Busqueda button{
+    height: 45px;
+    border: none;
+    background-color: #B531A8;
+    color: white;
+    font-size: 16px;
+    padding: 0 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.Busqueda button:hover{
+    background-color: #F27FA1;
+}
+
+
+.menu{
+    position: below;
+    list-style: none;
+    padding: 0;
+    background: #B531A8;
+    width: 90%;
+    max-width: 713px;
+    margin: auto;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+.menu li{
+    position: below;
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover{
+    background: #F27FA1;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.wrapper p {
+    flex: 1;
+    font-size: 18px;
+    margin-right: 20px; /* Añadir espacio entre el texto y la imagen */
+}
+
+.wrapper img {
+    float: left;
+    shape-outside: circle(50%);
+  }
+
+p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 0.5em;
+    text-decoration: none;
+}

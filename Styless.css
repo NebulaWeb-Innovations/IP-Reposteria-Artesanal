@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 1em;
+}
+
+.products, .cart {
+    margin-bottom: 2em;
+}
+
+.product, .cart-item {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.remove-from-cart {
+    background-color: #dc3545;
+}
+
+.remove-from-cart:hover {
+    background-color: #c82333;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 0.5em;
+    text-decoration: none;
+}
