@@ -6,41 +6,30 @@ body {
     color: black;
 }
 
-    /* Estilo del header */
-    .header {
-        position: relative;
-        height: 200px;
-        background-color: #B531A8;
-        overflow: hidden;
-      }
-  
-      /* SVG para el efecto de goteo */
-      .header svg {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-      }
-  
-      /* Contenido del header */
-      .header-content {
-        color: white;
-        text-align: center;
-        padding: 50px 0;
-        z-index: 1;
-        position: relative;
-      }
-
-header, footer{
+/* Estilo del header */
+.header {
+    position: relative;
+    height: 200px;
     background-color: #B531A8;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
+    overflow: hidden;
 }
 
-main {
-    padding: 1em;
+/* SVG para el efecto de goteo */
+.header svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+/* Contenido del header */
+.header-content {
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    z-index: 1;
+    position: relative;
 }
 
 header img {
@@ -54,37 +43,24 @@ header h1 {
     color: white;
 }
 
-.header .cart-button {
-    background-color: #ff9800;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
+header p {
+    font-size: 1.2rem;
 }
 
-nav {
-    margin: 20px 0;
-    text-align: center;
-}
-nav a {
-    margin: 0 15px;
+header, footer {
+    background-color: #B531A8;
     color: white;
-    text-decoration: none;
-    font-size: 18px;
+    text-align: center;
+    padding: 1em 0;
 }
 
-.Busqueda{
+/* Botón de búsqueda */
+.Busqueda {
     text-align: center;
     margin-top: 20px;
 }
 
-.Busqueda input{
+.Busqueda input {
     width: 300px;
     height: 40px;
     padding: 0 15px;
@@ -93,7 +69,7 @@ nav a {
     border-radius: 20px;
 }
 
-.Busqueda button{
+.Busqueda button {
     height: 45px;
     border: none;
     background-color: #B531A8;
@@ -102,39 +78,59 @@ nav a {
     padding: 0 20px;
     border-radius: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.Busqueda button:hover{
+.Busqueda button:hover {
     background-color: #F27FA1;
 }
 
-.menu{
-    position: below;
+/* Menú */
+.menu {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #B531A8, #F27FA1);
+    padding: 10px 0;
+    margin: 0 auto;
     list-style: none;
-    padding: 0;
-    background: #B531A8;
-    width: 90%;
-    max-width: 713px;
-    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.menu li a{
+.menu li a {
     text-decoration: none;
     color: white;
-    padding: 20px;
-    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-.menu li{
-    position: below;
-    display: inline-block;
-    text-align: center;
+.menu li a:hover {
+    color: #F8DFF0;
 }
 
-.menu li a:hover{
-    background: #F27FA1;
+.menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: white;
+    transition: width 0.3s ease;
 }
 
+.menu li a:hover::after {
+    width: 100%;
+}
+
+main {
+    padding: 1em;
+}
+
+/* Wrapper para los productos */
 .wrapper {
     display: flex;
     justify-content: space-between;
@@ -142,16 +138,35 @@ nav a {
     margin: 20px;
 }
 
-.wrapper p {
-    flex: 1;
-    font-size: 18px;
-    margin-right: 20px; /* Añadir espacio entre el texto y la imagen */
-}
-
 .wrapper img {
     float: left;
     shape-outside: circle(50%);
-  }
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.wrapper img:hover {
+    transform: scale(1.1);
+}
+
+/* Keyframes para animación de las imágenes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wrapper p {
+    flex: 1;
+    font-size: 18px;
+    margin-right: 20px;
+}
 
 p {
     margin-left: 10px;
@@ -186,6 +201,16 @@ button:hover {
 
 .remove-from-cart:hover {
     background-color: #c82333;
+}
+
+/* Pie de página */
+footer {
+    background-color: #B531A8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 3px solid #F27FA1;
 }
 
 .social-media a {
